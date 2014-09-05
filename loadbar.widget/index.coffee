@@ -1,4 +1,4 @@
-command: "sysctl -n vm.loadavg|awk '{print $2}'"
+command: "sysctl -n vm.loadavg | awk '{print $2}'"
 refreshFrequency: 2500
 render: (_) -> """
   <progress class='bar' value='0' max='6'></progress>
@@ -54,9 +54,9 @@ style: """
   .high::-webkit-progress-value
     background-color: rgba(243, 255, 134, .65)
 
-  .important::-webkit-progress-value
+  .higher::-webkit-progress-value
     background-color: rgba(185, 134, 255, .75)
 
-  .urgent::-webkit-progress-value
+  .highest::-webkit-progress-value
     background-color: rgba(255, 71, 71, 1)
 """
